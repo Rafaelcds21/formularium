@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="equação_horária.css">
+    <script>
+        function equação_horária_posição(){
+            var unidade = document.getElementById('unidades_espaço').options[document.getElementById('unidades_espaço').selectedIndex].value;
+
+            espaço_inicial = Number(document.getElementById("espaço_inicial").value);
+            velocidade = Number(document.getElementById("velocidade").value);
+            tempo = Number(document.getElementById("tempo").value);
+            aceleração = Number(document.getElementById("aceleração").value);
+
+            var espaço_final = espaço_inicial+(velocidade*tempo)+(aceleração*(tempo**2))/2
+
+            document.getElementById("resposta").innerHTML="A posição final do corpo será: "+espaço_final+" "+unidade;
+        }
+        function equação_horária_velocidade(){
+            var unidade = document.getElementById('unidades_velocidade1').options[document.getElementById('unidades_velocidade1').selectedIndex].value;
+            
+            velocidade_inicial = Number(document.getElementById("velocidade inicial").value);
+            tempo = Number(document.getElementById("tempo").value);
+            aceleração = Number(document.getElementById("aceleração1").value);
+
+            var velocidade_final = velocidade_inicial+aceleração*tempo;
+
+            document.getElementById("resposta1").innerHTML= "A velocidade final do corpo será: "+velocidade_final+" "+unidade;
+        }
+        function equação_torricelli(){
+            var unidade = document.getElementById('unidades_velocidade2').options[document.getElementById('unidades_velocidade2').selectedIndex].value;
+            
+            velocidade_inicial = Number(document.getElementById("velocidade_inicial").value);
+            aceleração = Number(document.getElementById("aceleração2").value);
+            delta_espaço = Number(document.getElementById("delta_espaço").value);
+
+            var velocidade_final = ((velocidade_inicial**2)+2*aceleração*delta_espaço)**(1/2);
+
+            document.getElementById("resposta2").innerHTML= "A velocidade final do corpo será: "+velocidade_final+" "+unidade;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h2 align="center">Formularium</h2>
+    </header>
+
+    <div align="center" class="linktopo">
+        <a href="file:///C:/wamp64/www/formularium/pag_inicial.html" class="btn btn-default">
+            Página inicial
+        </a>
+    </div>
+
+    <hr style="border-top: 1px solid black;">
+
+    <h3>Equação horária da posição</h3>
+
+    <p>
+        Selecione a unidade do deslocamanto: 
+        <select name="unidades_espaço" id="unidades_espaço">
+            <option value=""></option>
+            <option value="Km">Km</option>
+            <option value="m">m</option>
+        </select>
+    </p>
+
+    <p>Insira a posição inicial: <input id="espaço_inicial"></p>
+    <p>Insira a velocidade do corpo: <input id="velocidade"></p>
+    <p>Insira o tempo necessário para o deslocamento: <input id="tempo"></p>
+    <p>Insira o valor da aceleração do corpo: <input id="aceleração"></p>
+
+    <button type="button" onclick="equação_horária_posição()" class="btn btn-default">Resultado</button>
+
+    <p id="resposta"></p>
+
+    <hr style="border-top: 1px solid black;">
+
+    <h3>Equação horária da velocidade</h3>
+
+    <p>
+        Selecione a unidade da velocidade: 
+        <select name="unidades_velocidade1" id="unidades_velocidade1">
+            <option value=""></option>
+            <option value="Km/h">Km/h</option>
+            <option value="m/s">m/s</option>
+        </select>
+    </p>
+
+    <p>Insira a velocidade inicial do corpo: <input id="velocidade inicial"></p>
+    <p>Insira o tempo necessário para o deslocamento: <input id="tempo"></p>
+    <p>Insira o valor da aceleração do corpo: <input id="aceleração1"></p>
+
+    <p id="resposta1"></p>
+    
+    <button type="button" onclick="equação_horária_velocidade()" class="btn btn-default">Resultado</button>
+
+
+    <hr style="border-top: 1px solid black;">
+
+    <h3>Equação de Torricelli</h3>
+
+    <p>
+        Selecione a unidade da velocidade: 
+        <select name="unidades_velocidade2" id="unidades_velocidade2">
+            <option value=""></option>
+            <option value="Km/h">Km/h</option>
+            <option value="m/s">m/s</option>
+        </select>
+    </p>
+    
+    <p>Insira a velocidade inicial do corpo: <input id="velocidade_inicial"></p>
+    <p>Insira o valor da aceleração do corpo: <input id="aceleração2"></p>
+    <p>Insira a variação do espaço: <input id="delta_espaço"></p>
+
+    <p id="resposta2"></p>
+    
+    <p><button type="button" onclick="equação_torricelli()" class="btn btn-default">Resultado</button></p>
+
+    <br>
+    
+    <footer>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+            <i class="bi bi-person-circle"></i> Criador: <strong>Rafael Campos da Silva</strong>, 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <i class="bi bi-github"></i> github: <a href="https://github.com/Rafaelcds21/"><strong>https://github.com/Rafaelcds21/</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
