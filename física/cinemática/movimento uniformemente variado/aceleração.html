@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="aceleração.css">
+    <script>
+        function aceleração(){
+            var unidade = document.getElementById('unidades').options[document.getElementById('unidades').selectedIndex].value;
+            if(unidade=="Km/h²"){
+                var unidade_tempo="h";
+                var unidade_velocidade="Km/h";
+            }
+            else if(unidade=="m/s²"){
+                var unidade_tempo="s";
+                var unidade_velocidade="m/s";
+            }
+
+            velocidade = Number(document.getElementById("velocidade").value);
+            tempo = Number(document.getElementById("tempo").value);
+            
+            var aceleração = velocidade/tempo;
+            
+            document.getElementById("resposta").innerHTML="Dada a velocidade de "+velocidade+" "+unidade_velocidade+" e o tempo de "+tempo+" "+unidade_tempo+" a aceleração será de: "+aceleração+" "+unidade;
+        }
+
+        function conversao(){
+            var unidade_inicial = document.getElementById('unidades_inicial_conversão').options[document.getElementById('unidades_inicial_conversão').selectedIndex].value;
+            var unidade_final = document.getElementById('unidades_final_conversão').options[document.getElementById('unidades_final_conversão').selectedIndex].value;
+            
+            if(unidade_inicial == 'Km/h²' && unidade_final =='Km/h²'){
+                aceleração_inicial = document.getElementById('valor_aceleração_inicial').value;
+                
+                var aceleração_final = aceleração_inicial;
+                
+                document.getElementById("resposta_conversão").innerHTML = "A velocidade de "+aceleração_inicial+" "+unidade_inicial+" equivale à "+aceleração_final+" "+unidade_final;
+            }
+            
+            else if(unidade_inicial=='Km/h²' && unidade_final=='m/s²'){
+                aceleração_inicial = document.getElementById('valor_aceleração_inicial').value;
+                
+                var aceleração_final = aceleração_inicial/12960;
+                
+                document.getElementById("resposta_conversão").innerHTML = "A aceleração de "+aceleração_inicial+" "+unidade_inicial+" equivale à "+aceleração_final+" "+unidade_final;
+            }
+            
+            else if(unidade_inicial=='m/s²' && unidade_final=='Km/h²'){
+                aceleração_inicial = document.getElementById('valor_aceleração_inicial').value;
+                
+                var aceleração_final = aceleração_inicial*12960;
+                
+                document.getElementById("resposta_conversão").innerHTML = "A velocidade de "+aceleração_inicial+" "+unidade_inicial+" equivale à "+aceleração_final+" "+unidade_final;
+            }
+            
+            else if(unidade_inicial=='m/s²' && unidade_final=='m/s²'){
+                aceleração_inicial = document.getElementById('valor_aceleração_inicial').value;
+                
+                var aceleração_final = aceleração_inicial;
+                
+                document.getElementById("resposta_conversão").innerHTML = "A aceleração de "+aceleração_inicial+" "+unidade_inicial+" equivale à "+aceleração_final+" "+unidade_final;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h2 align="center">Formularium</h2>
+    </header>
+ 
+    <div align="center" class="linktopo">
+        <a href="file:///C:/wamp64/www/formularium/pag_inicial.html" class="btn btn-default">
+            Página inicial
+        </a>
+    </div>
+
+    <hr style="border-top: 1px solid black;">
+
+    <h3>Calculadora de aceleração</h3>
+
+    <p>
+        Selecione a unidade da aceleração: 
+        <select name="unidades" id="unidades">
+            <option value=""></option>
+            <option value="Km/h²">Km/h²</option>
+            <option value="m/s²">m/s²</option>
+        </select>
+    </p>
+
+    <p>Insira a velocidade do objeto: <input id="velocidade"></p>
+    
+    <p>Insira o tempo que o objeto se moveu: <input id="tempo"></p>
+
+    <p id="resposta"></p>
+
+    <button type="button" onclick="aceleração()" class="btn btn-default">Resultado</button>
+
+    <hr style="border-top: 1px solid black;">
+
+    <h3>Conversor de aceleração</h3>
+
+    <p>
+        Selecione a unidade inicial: 
+        <select name="unidades_inicial_conversão" id="unidades_inicial_conversão">
+            <option value=""></option>
+            <option value="Km/h²">Km/h²</option>
+            <option value="m/s²">m/s²</option>
+        </select>
+    </p>
+
+    <p>
+        Selecione a unidade final: 
+        <select name="unidades_final_conversão" id="unidades_final_conversão">
+            <option value=""></option>
+            <option value="Km/h²">Km/h²</option>
+            <option value="m/s²">m/s²</option>
+        </select>
+    </p>
+
+    <p>aceleração: <input id="valor_aceleração_inicial"></p>
+
+    <p id="resposta_conversão"></p>
+
+    <p><button type="button" onclick="conversao()" class="btn btn-default">Resultado</button></p>
+
+    <br>
+    
+    <footer>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+            <i class="bi bi-person-circle"></i> Criador: <strong>Rafael Campos da Silva</strong>, 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <i class="bi bi-github"></i> github: <a href="https://github.com/Rafaelcds21/"><strong>https://github.com/Rafaelcds21/</strong></a>
+        </p>
+    </footer>
+</body>
+</html>
