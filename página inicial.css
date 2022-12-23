@@ -1,0 +1,50 @@
+a{
+    color: black;
+}
+header{
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: green;
+  height: 100px;
+  line-height: 100px;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background-color: lightblue;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.linktopo{
+  padding-top: 20px;
+}
+i.fa{
+  font-size: 36px;
+}
+/* Style the sidenav links and the dropdown button */
+.dropdown-btn, .dropdown-btn1, .dropdown-btn2{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color:#000000;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Add an active class to the active dropdown button */
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container, .dropdown-container1, .dropdown-container2{
+  display: none;
+  background-color: none;
+  padding-left: 8px;
+}
