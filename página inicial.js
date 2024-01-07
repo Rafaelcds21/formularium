@@ -1,18 +1,19 @@
-$(function(){
-    $(".dropdown-btn").click(function(){
-       $(".dropdown-container").hide(); //Oculta todos elemento com classe
-       $(this).next().toggle(); //mostra o elemento seguinte ao botão clicado
-    });
-  });
-  $(function(){
-    $(".dropdown-btn1").click(function(){
-       $(".dropdown-container1").hide(); //Oculta todos elemento com classe
-       $(this).next().toggle(); //mostra o elemento seguinte ao botão clicado
-    });
-  });
-  $(function(){
-    $(".dropdown-btn2").click(function(){
-       $(".dropdown-container2").hide(); //Oculta todos elemento com classe
-       $(this).next().toggle(); //mostra o elemento seguinte ao botão clicado
-    });
-  });
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(num) {
+   document.getElementById("myDropdown"+num).classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+   if (!event.target.matches('.dropbtn')) {
+         var dropdowns = document.getElementsByClassName("dropdown-content");
+         var i;
+         for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+            }
+         }
+   }
+}
