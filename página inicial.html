@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formularium</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../estilo_página_inicial.css"></style>
+    <link rel="stylesheet" href="página_inicial.css"></style>
 </head>
 <body>
     <header>
@@ -16,254 +16,201 @@
     </header>
 
     <div align="center" class="linktopo">
-        <a href="https://rafaelcds21.github.io/formularium/" class="btn btn-default">Página inicial</a>
+        <a href="página_inicial.html" class="btn btn-default">Página inicial</a>
     </div>
 
     <hr style="border: 1px solid black;">
 
     <p>Página destinada ao aprendizado e facilitar os uso de diversas fórmulas.</p>
     <p>Tópicos disponíveis dentro de cada área:</p>
-
     <ol type="I">
         <li><strong>Física</strong></li>
         <ul>
-            <li class="dropdown-btn">Mecânica</li>
-            <div class="dropdown-container">
-                <ul>
-                    <li class="dropdown-btn1">Cinemática</li>
-                    <div class="dropdown-container1">
+            <div class="dropdown">
+                <li><button onclick="myFunction(1)" class="dropbtn">Mecânica</button></li>
+                
+                <div id="myDropdown1" class="dropdown-content">
+                    <ul>
+                        <li>Cinemática</li>
                         <ul>
-                            <li class="dropdown-btn2">Movimento uniforme</li>
-                            <div class="dropdown-container2">
+                            <li>Movimento uniforme</li>
                                 <ul type="circle">
-                                    <li><a href="C:\wamp64\www\formularium\física\cinemática\movimento uniforme\velocidade.html">Velocidade</a></li>
-                                    <li><a href="C:\wamp64\www\formularium\física\cinemática\movimento uniforme\equação horária.html">Equação Horária</a></li>
+                                    <li><a href="física\mecânica\cinemática\movimento uniforme\velocidade\velocidade.html">Velocidade</a></li>
+                                    <li><a href="física\mecânica\cinemática\movimento uniforme\equação horária da posição\equação_horária_posição.html">Equação Horária</a></li>
                                 </ul>
-                            </div>
                         </ul>
-    
+
                         <ul>
-                            <li class="dropdown-btn2">Movimento uniformemente variado</li>
-                            <div class="dropdown-container2">
+                            <li>Movimento uniformemente variado</li>
                                 <ul type="circle">
-                                    <li><a href="C:\wamp64\www\formularium\física\cinemática\movimento uniformemente variado\aceleração.html">aceleração</a></li>
-                                    <li><a href="C:\wamp64\www\formularium\física\cinemática\movimento uniformemente variado\equação_horária.html">equação_horária</a></li>
+                                    <li><a href="física\mecânica\cinemática\movimento uniformemente variado\aceleração\aceleração.html">aceleração</a></li>
+                                    <li><a href="física\mecânica\cinemática\movimento uniformemente variado\equações horárias\equações_horárias.html">equação_horária</a></li>
                                 </ul>
-                            </div>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Vetores</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li>Vetores</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\vetores\Módulo.html">Módulo</a></li>
+                            <li><a href="física\mecânica\vetores\módulo.html">Módulo</a></li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Forças</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li class="dropdown-btn1">Forças</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\Forças\peso.html">Peso</a></li>
-                            <li><a href="C:\wamp64\www\formularium\física\Forças\força_de_atrito_estático.html">Força de atrito estático</a></li>
-                            <li><a href="C:\wamp64\www\formularium\física\Forças\força_de_atrito_dinâmico.html">Força de atrito dinâmico</a></li>
+                            <li><a href="física\mecânica\forças\peso\peso.html">Peso</a></li>
+                            <li><a href="física\mecânica\forças\força de atrito estático\força_de_atrito_estático.html">Força de atrito estático</a></li>
+                            <li><a href="física\mecânica\forças\força de atrito dinâmico\força_de_atrito_dinâmico.html">Força de atrito dinâmico</a></li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Energia cinética, energia potencial e conservação de energia</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li class="dropdown-btn1">Energia cinética, energia potencial e conservação de energia</li>
                         <ul type="circle">
                             <li>
-                                <a href="C:\wamp64\www\formularium\física\Energia\energias.html">Energia cinética e energia potencial gravitacional</a>
+                                <a href="física\mecânica\energias e conservação de energia\energias\energias.html">Energia cinética e energia potencial gravitacional</a>
                             </li>
 
                             <li>
-                                <a href="C:\wamp64\www\formularium\física\Energia\conservação_energia.html">conservação de energia</a>
+                                <a href="física\mecânica\energias e conservação de energia\conservação de energia\conservação.html">conservação de energia</a>
                             </li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Trabalho</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li>Trabalho</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\Trabalho\trabalho.html">Trabalho</a></li>
+                            <li><a href="física\mecânica\trabalho\trabalho.html">Trabalho</a></li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Centro de massa e momento linear</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li>Centro de massa e momento linear</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\Centro de massa e momento linear\centro de massa.html">Centro de massa</a></li>
-                            <li><a href="C:\wamp64\www\formularium\física\Centro de massa e momento linear\momento linear.html">Momento linear</a></li>
+                            <li><a href="física\mecânica\centro de massa e momento linear\centro de massa\centro_de_massa.html">Centro de massa</a></li>
+                            <li><a href="física\mecânica\centro de massa e momento linear\momento linear\momento_linear.html">Momento linear</a></li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Torque e Momento angular</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li>Torque e Momento angular</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\Rolamento, Torque e Momento angular\rolamento.html">Rolamento</a></li>
-                            <li><a href="C:\wamp64\www\formularium\física\Rolamento, Torque e Momento angular\torque.html">Torque</a></li>
-                            <li><a href="C:\wamp64\www\formularium\física\Rolamento, Torque e Momento angular\momento angular.html">Momento angular</a></li>
+                            <li><a href="física\mecânica\torque e momento angular\torque\torque.html">Torque</a></li>
+                            <li><a href="física\mecânica\torque e momento angular\momento angular\momento_angular.html">Momento angular</a></li>
                         </ul>
-                    </div>
-                </ul>
+                    </ul>
 
-                <ul>
-                    <li class="dropdown-btn1">Rotação</li>
-                    <div class="dropdown-container1">
+                    <ul>
+                        <li>Rotação</li>
                         <ul type="circle">
-                            <li><a href="C:\wamp64\www\formularium\física\Rotação\rotação.html">Rotação</a></li>
+                            <li><a href="física\mecânica\rotação\rotação.html">Rotação</a></li>
                         </ul>
-                    </div>
-                </ul>
-            </div>
+                    </ul>
+                </div>
     
-            <!--<li class="dropdown-btn">Gravitação, ondas e termodinâmica</li>
-            <div class="dropdown-container">
-                <ul>
-                    <li class="dropdown-btn1">Equilíbrio e elasticidade</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Gravitação</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Fluidos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Oscilações</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Ondas</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Temperatura, calor e a 1° lei da termodinâmica</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Teoria cinética dos gases</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Entropia e a 2° lei da termodinâmica</li>
-                    <div class="dropdown-container1">
-                    </div>
-                </ul>
+                <li><button onclick="myFunction(2)" class="dropbtn">Gravitação, ondas e termodinâmica</button></li>
+
+                <div id="myDropdown2" class="dropdown-content">
+                    <ul>
+                        <li>Equilíbrio e elasticidade</li>
+                        <ul>
+                            <li><a href="C:\Users\campo\OneDrive\Documentos\Programação\Meus_sites\formularium\física\gravitação, ondas e termodinâmica\Equilíbrio e elasticidade\equilibrio_e_elasticidade.html">Equilíbrio e Elasticidade</a></li>
+                        </ul>
+
+                        <li>Gravitação</li>
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+
+                        <li>Fluidos</li>
+
+                        <li>Oscilações</li>
+
+                        <li>Ondas</li>
+                        <ul>
+                            <li><a href="C:\Users\campo\OneDrive\Documentos\Programação\Meus_sites\formularium\física\gravitação, ondas e termodinâmica\Ondas\frequencia.html">frequência</a></li>
+                            <li><a href="C:\Users\campo\OneDrive\Documentos\Programação\Meus_sites\formularium\física\gravitação, ondas e termodinâmica\Ondas\amplitude.html">amplitude</a></li>
+                        </ul>
+
+                        <li>Temperatura, calor e a 1° lei da termodinâmica</li>
+                        <ul>
+                            <li><a href="">Conversão de temperaturas</a></li>
+                            <li><a href="">Quantidade de calor</a></li>
+                            <li><a href="">1ª lei da termodinâmica</a></li>
+                        </ul>
+
+                        <li>Teoria cinética dos gases</li>
+
+                        <li>Entropia e a 2ª lei da termodinâmica</li>
+                        <ul>
+                            <li><a href="">Entropia</a></li>
+                            <li><a href="">2ª lei da termodinâmica</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <li><button onclick="myFunction(3)" class="dropbtn">Eletromagnetismo</button></li>
+                <div id="myDropdown3" class="dropdown-content">
+                    <ul>
+                        <li>Cargas elétricas</li>
+                        <li>Campos elétricos</li>
+                        <li>Lei de Gauss</li>
+                        <li>Potencial elétrico</li>
+                        <li>Capacitância</li>
+                        <li>Corrente e resistência</li>
+                        <li>Circuitos</li>
+                        <li>Campos magnéticos</li>
+                        <li>Campos magnéticos produzidos por corrente</li>
+                        <li>Indução e indutância</li>
+                    </ul>
+                </div>
+
+                <li><button onclick="myFunction(4)" class="dropbtn">Óptica e física moderna</button></li>
+                <div id="myDropdown4" class="dropdown-content">
+                    <ul>
+                        <li>Ondas eletromagnéticas</li>
+                        <li>Imagens</li>
+                        <li>Interferência</li>
+                        <li>Refração</li>
+                        <li>Difração</li>
+                        <li>Relatividade</li>
+                        <li>Fótons e ondas de matéria</li>
+                        <li>Mais energia de matéria</li>
+                        <li>Tudo sobre os Átomos</li>
+                        <li>Condução de eletricidade nos sólidos</li>
+                        <li>Física nuclear</li>
+                        <li>Energia nuclear</li>
+                        <li>Quarks, Léptons e o Big Bang</li>
+                    </ul>
+                </div>
             </div>
-    
-            <li class="dropdown-btn">Eletromagnetismo</li>
-            <div class="dropdown-container">
-                <ul>
-                    <li class="dropdown-btn1">Cargas elétricas</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Campos elétricos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Lei de Gauss</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Potencial elétrico</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Capacitância</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Corrente e resistência</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Circuitos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Campos magnéticos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Campos magnéticos produzidos por corrente</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Indução e indutância</li>
-                    <div class="dropdown-container1">
-                    </div>
-                </ul>
-            </div>
-    
-            <li class="dropdown-btn">Óptica e física moderna</li>
-            <div class="dropdown-container">
-                <ul>
-                    <li class="dropdown-btn1">Ondas eletromagnéticas</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Imagens</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Interferência</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Refração</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Difração</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Relatividade</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Fótons e ondas de matéria</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Mais energia de matéria</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Tudo sobre os Átomos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Condução de eletricidade nos sólidos</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Física nuclear</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Energia nuclear</li>
-                    <div class="dropdown-container1">
-                    </div>
-                    <li class="dropdown-btn1">Quarks, Léptons e o Big Bang</li>
-                    <div class="dropdown-container1">
-                    </div>
-                </ul>
-            </div>-->
         </ul>
+
         <li><strong>Matemática</strong></li>
+        
         <ul>
-            <li class="dropdown-btn">Operações Básicas</li>
-            <div class="dropdown-container">
-                <ul type="circle">
-                    <li><a href="C:\wamp64\www\formularium\matemática\operações básicas\soma.html">Soma</a></li>
-                    <li><a href="C:\wamp64\www\formularium\matemática\operações básicas\subtração.html">Subtração</a></li>
-                    <li><a href="C:\wamp64\www\formularium\matemática\operações básicas\multiplicação.html">Multiplicação</a></li>
-                    <li><a href="C:\wamp64\www\formularium\matemática\operações básicas\divisão.html">Divisão</a></li>
-                </ul>
+            <div class="dropdown">
+                <li><button onclick="myFunction(5)" class="dropbtn">Operações Básicas</button></li>
+                <div id="myDropdown5" class="dropdown-content">
+                    <ul type="circle">
+                        <li><a href="matemática\operações básicas\soma\soma.html">Soma</a></li>
+                        <li><a href="matemática\operações básicas\subtração\subtração.html">Subtração</a></li>
+                        <li><a href="matemática\operações básicas\multiplicação\multiplicação.html">Multiplicação</a></li>
+                        <li><a href="matemática\operações básicas\divisão\divisão.html">Divisão</a></li>
+                    </ul>
+                </div>
             </div>
 
             <!--<li class="dropdown-btn">Funções</li>
             <div class="dropdown-container">
             </div>
-
             <li class="dropdown-btn">Área</li>
             <div class="dropdown-container">
             </div>
-
             <li class="dropdown-btn">Volume</li>
             <div class="dropdown-container">
             </div>
-
             <li class="dropdown-btn">Cálculo diferencial e integral</li>
             <div class="dropdown-container">
                 <ul type="circle">
@@ -272,20 +219,31 @@
                 </ul>
             </div>-->
         </ul>
+
+        <li><strong>Química</strong></li>
+
+        <ul>
+            <li>termoquímica</li>
+        </ul>
     </ol>
+
     <footer>
         <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg>
-              <i class="bi bi-person-circle"></i> Criador: <strong>Rafael Campos da Silva</strong>, 
+            </svg>
+
+            <i class="bi bi-person-circle"></i> Criador: <strong>Rafael Campos da Silva</strong>,
+
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
+
             <i class="bi bi-github"></i> github: <a href="https://github.com/Rafaelcds21/"><strong>https://github.com/Rafaelcds21/</strong></a>
         </p>
     </footer>
-    <script type="text/javascript" src="pag_inicial.js"></script>
+    
+    <script src="página_inicial.js"></script>
 </body>
 </html>
