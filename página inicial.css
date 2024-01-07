@@ -25,26 +25,47 @@ footer{
 i.fa{
   font-size: 36px;
 }
-/* Style the sidenav links and the dropdown button */
-.dropdown-btn, .dropdown-btn1, .dropdown-btn2{
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  color:#000000;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+/* Dropdown Button */
+.dropbtn {
+background-color: white;
+color: black;
+padding: 14px;
+font-size: 14px;
+border: none;
+cursor: pointer;
 }
 
-/* Add an active class to the active dropdown button */
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container, .dropdown-container1, .dropdown-container2{
-  display: none;
-  background-color: none;
-  padding-left: 8px;
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+background-color: #2980B9;
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: relative;
+background-color: #f1f1f1;
+min-width: 200px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 10px 10px;
+text-decoration: none;
+display: relative;
+}
+
+/* Change color of dropdown links on hover */
+/*.dropdown-content a:hover {background-color: #ddd;}*/
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
